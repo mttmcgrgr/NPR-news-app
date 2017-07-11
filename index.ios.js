@@ -11,7 +11,7 @@ export default class MosaicChallenge extends Component {
 
 
   openAuth(){
-    
+    LinkingIOS
   }
 
   render() {

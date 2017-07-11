@@ -1,0 +1,6 @@
+{
+   "name": "mosaic-challenge",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
