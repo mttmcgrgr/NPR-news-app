@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import Config from './config.js';
-import { AppRegistry, StyleSheet, Text, View, Button,
-  TouchableHighlight, LinkingIOS
- } from 'react-native';
+import {
+  AppRegistry, StyleSheet, Text, View, Button
+} from 'react-native';
 
-export default class MosaicChallenge extends Component {
-  constructor(props){
-    super(props)
-  }
-
-
-  openAuth(){
-    
+export default class Auth extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {}
   }
 
   render() {
@@ -21,7 +16,6 @@ export default class MosaicChallenge extends Component {
           Welcome to NPR News Stream
         </Text>
         <Button
-          onPress={this.openAuth}
           style={styles.button}
           title="Login"
           color="#841584"
@@ -55,5 +49,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#1B84FF',
   }
 });
-
-AppRegistry.registerComponent('MosaicChallenge', () => MosaicChallenge);
