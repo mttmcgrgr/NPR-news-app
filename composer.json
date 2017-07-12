@@ -1,6 +1,7 @@
 {
    "name": "mosaic-challenge",
     "require": {
-        "monolog/monolog": "1.0.*"
+        "monolog/monolog": "1.0.*",
+      "npr/npr-one-backend-proxy": "^1.1"
     }
 }

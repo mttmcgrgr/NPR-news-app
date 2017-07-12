@@ -3,7 +3,7 @@ import {
   AppRegistry, StyleSheet, Text, View, Button
 } from 'react-native';
 
-export default class Auth extends Component {
+export default class Home extends Component {
   constructor (props) {
     super(props);
     this.state = {}

@@ -1,36 +1,43 @@
 import React, { Component } from 'react';
 import Config from './config.js';
+import Home from './app/components/home.js';
+import Stream from './app/components/stream.js';
+import Stream from
 import { AppRegistry, StyleSheet, Text, View, Button,
-  TouchableHighlight, LinkingIOS
+  TouchableHighlight, Linking, Navigator, SegmentedControlIOS,
  } from 'react-native';
 
-export default class MosaicChallenge extends Component {
-  constructor(props){
-    super(props)
-  }
+export default class App extends Component {
 
-
-  openAuth(){
-    LinkingIOS
-  }
+  getInitialState() {
+    return {
+      routes: {
+        home: {
+          title: 'Home',
+          component: Home
+        },
+        account: {
+          title: 'My Account',
+          component: AccountView
+        }
+      }
+    };
+  },
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to NPR News Stream
-        </Text>
-        <Button
-          onPress={this.openAuth}
-          style={styles.button}
-          title="Login"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-      </View>
+      <Navigator
+        ref={component => this._navigator = component}
+        navigationBar={this.getNav()}
+        initialRoute={this.state.routes.home}
+        renderScene={(route, navigator) =>
+          <route.component {...route.props} navigator={navigator} />}
+      />
     );
-  }
+  },
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
